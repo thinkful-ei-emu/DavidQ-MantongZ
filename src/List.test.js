@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import List from './List';
+import store from './STORE';
 
 describe('<List />', () => {
     it ('renders without crashing', () => {
@@ -10,7 +11,7 @@ describe('<List />', () => {
             header: 'First list',
             cardIds: [ 'a', 'b', 'e', 'f', 'g', 'j', 'l', 'm' ],
           };
-        ReactDOM.render(<List key= {list.id} title={list.header} cards={list.cardIds.map(id => store.allCards[id])} />), div);
+    ReactDOM.render((<List key= {list.id} title={list.header} cards={list.cardIds.map(id => store.allCards[id])} />), div);
            
         // List
         // key={list.id}
